@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTrack - Carbon Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🌱 EcoTrack</h1>
+        <p>Calculate your weekly carbon footprint and save the planet!</p>
+        
+        <form id="calc-form">
+            <div class="question">
+                <label for="car-miles">How many miles do you travel by car each week?</label>
+                <input type="number" id="car-miles" placeholder="e.g. 50" min="0" required>
+            </div>
+
+            <div class="question">
+                <label for="electricity">What is your weekly electricity usage (in kWh)?</label>
+                <input type="number" id="electricity" placeholder="e.g. 30" min="0" required>
+            </div>
+
+            <div class="question">
+                <label for="meat">How many days a week do you eat meat?</label>
+                <input type="number" id="meat" placeholder="0 to 7" min="0" max="7" required>
+            </div>
+
+            <button type="submit">Calculate Footprint</button>
+        </form>
+
+        <div id="result-box" class="hidden">
+            <h2>Your Result</h2>
+            <p>Your weekly carbon footprint is: <strong id="score">0</strong> kg of CO₂</p>
+            <p id="badge-text"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
